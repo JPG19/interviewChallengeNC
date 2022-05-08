@@ -17,4 +17,10 @@ However, the save button is disabled by default and to enable it, there are cond
  - First Name, Last Name and Address field data has to be longer than a character
  - SSN field has to be in the following format "###-##-####"
 
-When these conditions are met, then the save button is enabled and on clicked, the form data is sent to the api to be stored and a new member is displaying on the table. Errors are displayed below the reset and save button
+When these conditions are met, then the save button is enabled and on clicked, the form data is sent to the api to be stored and a new member is displaying on the table. Errors are displayed below the reset and save button.
+
+Assuming the back end server is up and all the endpoints are ready to be hit then we can test the site.
+To start off this site, clone the repository and run "npm install" once the site starts you will need to create a new token in order to be authenticated, hit 
+http://localhost:8081/auth
+to get the token as a response, i personally use Postman to do this. Once you've obtained the token then replace the token value with the new one on src/Form.tsx line 10 (Always keep "Bearer" as the prefix). Once this is setup then you should be able to get the list of members from this endpoint via a GET request http://localhost:8081/api/members 
+You should also be able to save values from the form into the table.
