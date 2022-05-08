@@ -1,46 +1,20 @@
-# Getting Started with Create React App
+# NC Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![image](https://user-images.githubusercontent.com/47921985/167306619-2bc74777-899e-4aff-9687-08b547ffddb8.png)
 
-## Available Scripts
+As you can see from the image above this is how the site looks, there's both a form and a table. As you might expect, the form is the one in charge of submitting member data, send it to an api and store it and the table is the one displaying that data. When loading the site, the table is getting all the members stored. Header and footer do not provide anything to the site other than looks.
 
-In the project directory, you can run:
+The form has 4 fields which are
+ - First Name
+ - Last Name
+ - Address
+ - SSN (Social security number)
 
-### `npm start`
+These 4 fields combined make up a members data that is to be sent to the api via the save button. The reset button is there to clear all the populated data in each form field.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+However, the save button is disabled by default and to enable it, there are conditions to be met before being able to hit the save button and create a new member, these are the following:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ - First Name, Last Name and Address field data has to be longer than a character
+ - SSN field has to be in the following format "###-##-####"
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+When these conditions are met, then the save button is enabled and on clicked, the form data is sent to the api to be stored and a new member is displaying on the table.
