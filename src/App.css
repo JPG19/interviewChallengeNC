@@ -1,38 +1,110 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  background-color: hsl(121, 100%, 50%);
+  height: 100px;
+  display: grid;
+  grid-auto-flow: column;
+  text-align: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.form-container {
+  width: 85%;
+  margin: auto;
+  background-color: hsl(341, 100%, 50%);
+  min-height: 600px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flex-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Form start */
+form {
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  width: 50%;
+}
+
+form input {
+  height: 80px;
+  display: block;
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+
+form .buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px 0 0 0;
+}
+
+form .buttons button {
+  width: 30%;
+  cursor: pointer;
+  height: 45px;
+  background-color: hsl(0, 0%, 80%);
+  text-align: center;
+  border: none;
+  color: hsl(0, 0%, 0%);
+}
+
+form .buttons button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+form .error {
+  color: red;
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+
+/* Form end */
+
+.table {
+  background: hsl(0, 0%, 100%);
+  width: 50%;
+  overflow: auto;
+}
+
+.table .header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
+}
+
+.table .header div {
+  border: 1px solid hsl(0, 0%, 0%);
+  height: 50px;
+}
+
+.table .grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+
+.table .grid-container div {
+  border: 1px solid hsl(0, 0%, 0%);
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: hsl(121, 100%, 50%);
+  height: 70px;
 }
