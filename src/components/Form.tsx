@@ -86,7 +86,10 @@ const Form = () => {
       })
         .then((res) => res.json())
         .then((result) => {
-          if (result.code === "Unauthorized") {
+          if (
+            result.code === "Unauthorized" ||
+            result.code === "InvalidCredentials"
+          ) {
             return Promise.reject(result);
           }
           setMembers(result);
