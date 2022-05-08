@@ -138,7 +138,13 @@ const Form = () => {
     let addressPass = address.trim().length > 1;
     let ssnPass = ssn.trim().match(/^[0-9]{3}\-?[0-9]{2}\-?[0-9]{4}$/);
 
-    if (firstNamePass && lastNamePass && addressPass && ssnPass) {
+    if (
+      firstNamePass &&
+      lastNamePass &&
+      addressPass &&
+      ssnPass &&
+      error === ""
+    ) {
       setDisabled(false);
       return;
     }
