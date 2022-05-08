@@ -2,7 +2,7 @@
 
 ![image](https://user-images.githubusercontent.com/47921985/167306619-2bc74777-899e-4aff-9687-08b547ffddb8.png)
 
-As you can see from the image above this is how the site looks, there's both a form and a table. As you might expect, the form is the one in charge of submitting member data, send it to an api and store it and the table is the one displaying that data. When loading the site, the table is getting all the members stored. Header and footer do not provide anything to the site other than looks.
+As you can see from the image above this is how the site looks, there's both a form and a table. As you might expect, the form is the one in charge of submitting member data, send it to an api and store it and the table is the one displaying that data. When loading the site, the api is being called to retrieve all the stored memebers and the table displays them. Header and footer do not provide anything to the site other than looks.
 
 The form has 4 fields which are
  - First Name
